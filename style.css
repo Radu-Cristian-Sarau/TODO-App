@@ -8,6 +8,7 @@
     --blue: #2d70fd;
     --green: #00d8a7;
     --white: #ffffff;
+    --courier: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
     position: absolute;
     right: 0.5rem;
     bottom: 0.5rem;
+    font-family: var(--courier);
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -58,6 +60,7 @@ h2 {
     height: 3rem;
     color: var(--dark);
     text-align: center;
+    font-family: var(--courier);
 }
 
 .input {
@@ -71,6 +74,7 @@ h2 {
     border-radius: 0.5rem;
     padding: 1.25rem;
     font-size: 1rem;
+    font-family: var(--courier);
 }
 
 input[type="text"]::placeholder {
@@ -96,12 +100,27 @@ li {
 }
 
 #todoList p {
+    display: flex;
+    gap: 1rem;
+    color: var(--dark);
+    align-items: center;
+    font-family: var(--courier);
+}
+
+#todoList .disabled  {
     color: #8f98a8;
 }
 
 .disabled {
     display: flex;
     text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
 }
 
 input[type="checkbox"]::before {
@@ -114,9 +133,10 @@ input[type="checkbox"]::before {
     border: 0.06rem solid var(--grey-border);
     border-radius: 50%;
     color: transparent;
+    font-family: var(--courier);
 }
 
-input[type="checkbox"]::before::after {
+input[type="checkbox"]:checked::before {
     color: var(--white);
     background-color: var(--green);
     border: 0.06rem solid var(--green);
@@ -136,6 +156,7 @@ input[type="checkbox"]::before::after {
 
 .counter-container p {
     align-self: center;
+    font-family: var(--courier);
 }
 
 .counter-container button {
@@ -143,6 +164,7 @@ input[type="checkbox"]::before::after {
     border: none;
     color: var(--grey);
     font-size: 1rem;
+    font-family: var(--courier);
 }
 
 .footer {
@@ -155,6 +177,7 @@ input[type="checkbox"]::before::after {
 
 .made-by, .author {
     font-size: 0.9rem;
+    font-family: var(--courier);
 }
 
 .made-by {
